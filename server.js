@@ -35,10 +35,10 @@ app.post("/api/auth/signup", async (req, res) => {
 });
 
 app.post("/api/auth/login", async (req, res) => {
-    console.log("login request recieved")
+    // console.log("login request recieved")
   try {
     const { email, password } = req.body;
-    console.log(req.body)
+    // console.log(req.body)
     const user = await User.findOne({ email });
     if (!user) return res.status(400).json({ error: "User not found" });
     
